@@ -6,3 +6,40 @@ spring:
       uri: http://localhost:8081
       username: ehs
       password: ehs123
+
+#server:
+#  port: 8090
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8082/eureka/
+#spring:
+#  application:
+#    name: api-gateway
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: customers-company
+#          uri: lb://customers-company
+#          #uri: http://localhost:8085
+#          predicates: 
+#            - Path=/customerc/**
+#        - id: customers-person
+#          uri: lb://customers-person
+#          predicates: 
+#            - Path=/customerp/**
+#        - id: account-customers
+#          uri: lb://account-customers
+#          predicates: 
+#            - Path=/account/**
+#        - id: credits-customers
+#          uri: lb://credits-customers
+#          predicates: 
+#            - Path=/credit/**
+#        - id: ms-products
+#          uri: lb://ms-products
+#          predicates: 
+#            - Path=/product/**
